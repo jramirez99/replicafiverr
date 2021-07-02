@@ -1,0 +1,204 @@
+:root {
+    --verde: #00b30c;
+    --gris1: #353537;
+    --gris2: #eaeaeb;
+    --gris3: #777777;
+}
+
+/* GLOBALS */
+h1,h2,h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.btn-success {
+    background-color: var(--verde)!important;
+}
+
+
+/* HEADER SCROLL */
+/* ocultar la barra */
+.header-scroll {
+    position: fixed;
+    width: 100%;
+    margin-top: -300px;
+    background-color: white;
+    z-index: 100;
+    opacity: 0;
+}
+.header-scroll .activo {
+    margin-top: 0;
+    opacity: 1;
+}
+.header-scroll .nav-link {
+    color: var(--gris3)!important;
+}
+.header-scroll .btn-outline-success:hover {
+    color: white!important;
+}
+
+
+/* HEADER */
+.header {
+    background-image: url(../img/hero.jpg);
+    min-height: 30rem;
+    background-size: cover;
+}
+.header .nav-link {
+    color: white!important;
+}
+.header .btn-outline-light:hover {
+    color: black!important;
+}
+.header .search {
+    min-height: 25rem;
+}
+.header .btn-success {
+    border: 0;
+}
+
+/* CATEGORIES */
+.categorie {
+    padding: 0 0 100px 0;
+    overflow: hidden;
+    height: 300px;
+}
+.categorie h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.categorie h3::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--verde);
+    margin: .7rem auto;
+}
+/* cuando damos hover crece la barra */
+.categorie:hover h3::before {
+    width: 100px;
+}
+
+.categorie p {
+    color: rgb(114, 114, 114);
+    opacity: 0;
+    padding: 30px 0 0 0;
+    transition: all .3s ease-in-out;
+}
+/* cuando damos hover se muestra gracias al opacity */
+.categorie:hover p {
+    opacity: 1;
+    padding: 10px 0 0 0;
+}
+
+/* NEW PRO */
+.new-pro {
+    background-color: var(--gris1)!important;
+}
+.new-pro .row {
+    min-height: 25rem;
+}
+
+
+/* FIRST STEPS */
+.first-steps .description {
+    height: 20rem;
+    background-size: cover;
+    flex: 1 0 calc(50% - 1rem);
+    margin: .4rem .5rem 0 0;
+}
+@media (min-width: 768px) {
+    .first-steps .description {
+        flex: 1 0 calc(20% - 1rem);
+        margin: 0 1rem 0 0;
+    }
+}
+.description span {
+    font-weight: 900;
+}
+
+.first-steps .bg-logotipo {
+    background-image: url(../img/servicio1.png);
+}
+.first-steps .bg-social-media {
+    background-image: url(../img/servicio2.png);
+}
+.first-steps .bg-audio {
+    background-image: url(../img/servicio3.png);
+}
+.first-steps .bg-traductions {
+    background-image: url(../img/servicio4.png);
+}
+.first-steps .bg-wordpress {
+    background-image: url(../img/servicio5.png);
+}
+
+
+/* BENEFITS */
+.benefits .row {
+    min-height: 20rem;
+}
+.benefits h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.benefits h3 span {
+    font-weight: 700;
+}
+
+
+/* TESTIMONIASL */
+.testimonials {
+    background-color: var(--gris2);
+}
+.testimonials .carousel {
+    background-color: white;
+}
+.testimonials h3 {
+    font-size: 1.4rem;
+}
+.testimonials .carousel-item blockquote {
+    font-size: 1.6rem;
+    color: var(--gris3);
+    font-style: italic;
+}
+.testimonials .carousel-item p {
+    font-size: .8rem;
+}
+
+
+/* GUIDES */
+.guides .card h3 {
+    font-size: 1.2rem;
+}
+
+
+/* FOOTER */
+.footer .container-fluid {
+    display: flex;
+    flex-wrap: wrap
+}
+.footer .container-fluid .widget {
+    justify-content: space-between;
+    flex: 1 0 calc(50% - 1rem);
+}
+@media (min-width:768px) {
+    .footer .container-fluid .widget {
+        flex: 1 0 calc(33.33% - 1rem);
+    }
+}
+@media (min-width:992px) {
+    .footer .container-fluid .widget {
+        flex: 1 0 calc(20% - 1rem);
+    }
+}
+.footer .widget h3 {
+    font-size: 1.2rem;
+    color: rgb(122, 122, 122);
+}
+.footer .widget .nav-link {
+    color: rgb(122, 122, 122);
+    font-size: 1rem;padding: .5rem 0;
+}
